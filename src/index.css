@@ -1,0 +1,146 @@
+/* ============================================
+   TOKENS DE DESIGN — Carnet de chantier numérique
+   ============================================ */
+:root {
+  /* Couleurs */
+  --encre: #16213E;
+  --encre-soft: #2A3A5C;
+  --sable: #F7F3EC;
+  --sable-deep: #EFE8DA;
+  --terracotta: #C8553D;
+  --terracotta-soft: #E0876F;
+  --sauge: #5C7A5C;
+  --graphite: #3A3A3A;
+  --blanc: #FFFFFF;
+  --ligne: rgba(22, 33, 62, 0.14);
+
+  /* Typo */
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-marker: 'Caveat', cursive;
+
+  /* Layout */
+  --max-width: 1180px;
+  --radius: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--graphite);
+  background: var(--sable);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid var(--terracotta);
+  outline-offset: 3px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--encre);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+}
+
+.marker-note {
+  font-family: var(--font-marker);
+  font-weight: 600;
+  color: var(--terracotta);
+  transform: rotate(-2deg);
+  display: inline-block;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--terracotta);
+  color: var(--sable);
+}
+
+.btn-primary:hover {
+  box-shadow: 4px 4px 0 var(--encre);
+}
+
+.btn-outline {
+  border-color: var(--encre);
+  color: var(--encre);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  box-shadow: 4px 4px 0 var(--terracotta);
+}
