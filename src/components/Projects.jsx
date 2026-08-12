@@ -13,7 +13,7 @@ const projects = [
     desc: "Template premium pour marques de cosmétiques : questionnaire de recommandation par type de peau et carnation, catalogue de produits, commande directe via WhatsApp.",
     stack: ['React', 'Vite', 'Git'],
     status: 'done',
-    link: 'maye-cameroun-template.vercel.app',
+    link: 'https://maye-cameroun-template.vercel.app',
   },
   {
     title: 'MindFlow',
